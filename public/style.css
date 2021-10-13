@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   
+   font-family: sans-serif;
+   width: 100vw;
+   background-image: url("https://images.unsplash.com/photo-1534629938736-b1b076531d3b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80");
+   background-size: cover;
+   background-repeat: repeat;
+}
+
+header {
+    background-color: rgb(117, 112, 112);
+    color: honeydew;
+    
+    
+    height: 50px;
+    width: 100%;
+}
+
+.container {
+   align-items: center;
+   display: flex;
+   justify-content: center;
+  
+   
+   width: 100%;
+}
+
+.content-container{
+width: 80%;
+}
+
+.top-sections {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+
+}
+
+section {
+    width: 100%;
+}
+
+.history {
+    
+    height: 40%;
+    
+}
+
+.history-search {
+    margin: 0 0 15px 0;
+}
+
+.current {
+    height: 200px;
+    
+}
+
+li {
+    list-style: none;
+}
+
+.five-day {
+    height: 500px;
+    width: 100%;
+}
+
+.five-day-cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+.card{
+    width: 100%;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.current,.history,.current-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    font-size: 18px;
+}
+
+
+/* media query */
+@media screen and (min-width:800px) {
+    .top-sections{
+        flex-direction: row;
+        
+    }
+    .history {
+        width: 35%;
+
+    }
+
+    .current{
+        width: 65%;
+    }
+
+    .card{
+        width: 200px;
+        height: 250px;
+    
+    }
+
+    .five-day-cards{
+
+        flex-wrap: nowrap;
+    }
+
+    .content-container{
+        min-width: 1200px;
+    }
+}
+
+
+
+
+
