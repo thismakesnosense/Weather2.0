@@ -45,6 +45,7 @@ const getDay = (date) => {
 };
 
 const renderFiveDay = (data) => {
+    fiveDayDiv.innerHTML = "";
  for (let i = 0; i < data.length; i++){
    const card = document.createElement("div");
    card.classList.add("card");
