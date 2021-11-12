@@ -141,13 +141,26 @@ const renderSearchHistory = () => {
           console.log(i);
           const li = document.createElement("li");
           li.innerText = (localCitys[i]);
+          li.classList.add("history-item");
           historyList.appendChild(li);
-      }
+      };
+    const historyItems = document.querySelectorAll(".history-item");
+               console.log(historyItems);
+       for (let i=0; i<historyItems.length; i++){
+           const element = historyItems[i];
+           element.addEventListener("click", () => {
+               console.log(element, element.innerText);
+            fetchTodayWeather(element.innerText);
+            fetchFiveDay(element.innerText);
+            // renderSearchHistory();
+           })
+       }  
+
     
 
 };
 
-renderSearchHistory();
+
 
 
 
@@ -155,7 +168,7 @@ renderSearchHistory();
 
 searchBtn.addEventListener("click", submitSearch);
 document.addEventListener("DOMContentLoaded", () => {
-
+    renderSearchHistory();
     const localCity = JSON.parse(localStorage.getItem("citys"));
 
     const cityToSearch = localCity ? localCity[localCity.length-1]:"Washington D.C.";

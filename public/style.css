@@ -99,6 +99,15 @@ p {
     font-size: 18px;
 }
 
+.history-item {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.history-item:hover {
+    color: rgb(195, 15, 15);
+}
+
 
 /* media query */
 @media screen and (min-width:800px) {
